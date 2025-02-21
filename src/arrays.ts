@@ -145,7 +145,7 @@ export function injectPositive(values: number[]): number[] {
 
         return output;
     }, []);
-
+    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
     if (!passedNegative) {
         output.push(sum);
     }
