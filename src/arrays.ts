@@ -146,21 +146,9 @@ export function injectPositive(values: number[]): number[] {
         return output;
     }, []);
 
-    if (passedNegative == false) {
+    if (!passedNegative) {
         output.push(sum);
     }
-    /*let output: number[] = values.reduce((output: number[], value: number) => {
-        output.push(value);
-
-        if (!passedNegative && value < 0) {
-            passedNegative = true;
-            output.push(value);
-        } else if (!passedNegative) {
-            sum += value;
-        }
-
-        return output;
-    }, []);*/
 
     return output;
 }
